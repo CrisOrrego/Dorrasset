@@ -1,0 +1,8 @@
+<md-tabs class="mh500" ng-if="activateWidget" style="margin-left: -40px;">
+	<md-tab ng-repeat="S in Symbols">
+		<md-tab-label>{{ S.title }}</md-tab-label>
+		<md-tab-body>
+			<tv-realtime-chart config="S" ></tv-realtime-chart>
+		</md-tab-body>
+	</md-tab>
+</md-tabs>
