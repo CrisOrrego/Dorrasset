@@ -1,0 +1,30 @@
+#Page_Wrapper {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.Accordion_Content {
+  padding: 2px 20px 20px 55px;
+}
+/*
+animation:*/
+.slideDown.ng-hide {
+  max-height: 0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+.slideDown {
+  max-height: 10000px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+.slideDown.ng-hide-remove,
+.slideDown.ng-hide-add {
+  /* remember, the .hg-hide class is added to element
+  when the active class is added causing it to appear
+  as hidden. Therefore set the styling to display=block
+  so that the hide animation is visible */
+  display: block!important;
+}

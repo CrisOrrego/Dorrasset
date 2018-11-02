@@ -2,10 +2,10 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
-	<script type="text/javascript" src="js/libs.js?201810160927"></script> 
-	<script type="text/javascript" src="js/app.js?201810160927"></script> 
+	<script type="text/javascript" src="js/libs.js?20181101"></script> 
+	<script type="text/javascript" src="js/app.js?20181101"></script> 
 	<link rel="stylesheet"	href="https://fonts.googleapis.com/css?family=Lato:400,700" >
-	<link rel="stylesheet" href="css/style.css?201810160927">
+	<link rel="stylesheet" href="css/style.css?20181101">
 	<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 </head>
 <body ng-app="Dorrasset" ng-cloak layout=column ng-controller="MainCtrl" class="overflow-y">
@@ -23,7 +23,7 @@
 		-->
 		<div class="h50"></div>
 
-		<md-card ng-repeat="P in AccordionPages" class="no-margin well">
+		<div ng-repeat="P in AccordionPages" class="">
 			<div layout class="md-pointer" ng-click="openAccordionPage(P)">
 				<md-button class="md-icon-button">
 					<md-icon md-font-icon="fa-chevron-right fa-lg" ng-class="{ 'fa-rotate-90': P.open }"></md-icon>
@@ -34,7 +34,7 @@
 			<div class="slideDowns"  ng-show="P.open">
 				<div ng-include="P.url" class="Accordion_Content"></div>
 			</div>
-		</md-card>
+		</div>
 
 
 		<div class="h100"></div>

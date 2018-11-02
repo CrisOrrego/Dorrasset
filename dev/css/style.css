@@ -104,9 +104,6 @@ html {
 .border-rounded {
   border-radius: 500px;
 }
-.iframe-fix {
-  border: none;
-}
 .only-on-print {
   display: none;
 }

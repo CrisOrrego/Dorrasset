@@ -1,6 +1,6 @@
-<div layout>
+<div layout=column layout-align="center center">
 	
-	<div class="text-justify text-lg padding-right mxw600" flex>
+	<div class="text-justify text-lg padding-right mxw800">
 
 		Value at Risk (VaR) modeling is the predominant tool used on Wall Street for managing investment portfolio risk. Despite its popularity it is woefully flawed.
 
@@ -19,6 +19,34 @@
 		<br><br>
 
 		<i>“We selected the six largest daily percentage changes in the Dow Jones Industrial Average during October, and asked the question of how frequent these changes occur assuming that, as is commonly done in finance models, these events are normally distributed. The results are truly astonishing. There were two daily changes of more than 10% during the month. With a standard deviation of daily changes of 1.032% (computed over the period 1971-2008) movements of such a magnitude can occur only once every 73 to 603 trillion billion years. Since our universe, according to most physicists, exists a mere 20 billion years we, finance theorists, would have had to wait for another trillion universes before one such change could be observed. Yet it happened twice during the same month. A truly miraculous event. The other four changes during the same month of October have a somewhat higher frequency, but surely we did not expect these to happen in our lifetimes.”</i>
+
+		<br><br>
+
+		Kelly Criterion was a formula developed by John Kelly at Bell Laboratories in 1956. The formula is used to determine the optimal size of a series of bets (or investments). Kelly, a physicist by background, was fascinated with beating the Las Vegas casinos. Partnering with his mathematician colleagues, Claude Shannon and Ed Thorp they successfully won money in roulette and black jack. While Kelly may have come up with the formula it was Ed Thorp that made the most use of it first as he continued to “Beat the Dealers”, the name of subsequent book he wrote and then as an extremely successful hedge fund manager at Princeton Newport Partners. Princeton Newport Partners averaged 15.1% annual returns (after fees) for 19 years. Even more amazing they stacked up 227 winning months and only 3 losing months with the losing months all under 1%.
+
+		<br><br>
+
+	</div>
+
+	<div layout>
+		
+		<div layout=column flex>
+			Here is the original Kelly Criterion formula:
+			<div class="h30"></div>
+			<img src="img/kelly_vs_var_1.png" width="350">
+		</div>
+
+		<div flex>
+			<img src="img/kelly_vs_var_2.png" width="520" height="392">
+		</div>
+
+	</div>
+
+	<div class="text-justify text-lg padding-right mxw600">
+
+		<br><br>
+
+		It should be noted that Kelly Criterion is NOT designed to eliminate volatility rather it achieves to establish the maximum geometric return without risk of ruin. For this reason Dorr Asset Management, like many that use Kelly Criterion, use a fractional Kelly amount. This has the benefit of reducing portfolio volatility while still capturing a significant percentage of the maximum growth rate.
 
 	</div>
 

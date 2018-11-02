@@ -7,11 +7,13 @@ angular.module('MainCtrl', [])
 
 		Rs.activateWidget = true;
 
-		Rs.Symbols = [
-			{ id: 'USDMXN',  title: 'U.S. Dollar / Mexican Peso', symbol: 'FX:USDMXN', interval: 'W', active: true },
-			{ id: 'FTSEMIB', title: 'FTSE MIB INDEX', 			symbol: 'MIL:FTSEMIB', interval: 'W', active: true },
-			{ id: 'BTPBUND', title: 'SPREAD BTP-BUND', 			symbol: 'TVC:BTPBUND', interval: 'W', active: true },
-		];
+		Rs.Symbols = {
+			'USDMXN':  	{ id: 'USDMXN',  title: 'U.S. Dollar / Mexican Peso', 	symbol: 'FX:USDMXN', 		interval: 'W', active: true },
+			'FTSEMIB': 	{ id: 'FTSEMIB', title: 'FTSE MIB INDEX', 				symbol: 'MIL:FTSEMIB', 		interval: 'W', active: true },
+			'BTPBUND': 	{ id: 'BTPBUND', title: 'SPREAD BTP-BUND', 				symbol: 'TVC:BTPBUND', 		interval: 'W', active: true },
+			'COCOA':   	{ id: 'COCOA',   title: 'COCOA FUTURES', 				symbol: 'ICEUSA_EOD:CC1!', 	interval: 'W', active: true },
+			'COFFEE':   { id: 'COFFEE',   title: 'COFFEE FUTURES', 				symbol: 'ICEUSA_EOD:KC1!', 	interval: 'W', active: true },
+		};
 
 
 		Rs.AccordionPages = [
@@ -19,8 +21,18 @@ angular.module('MainCtrl', [])
 			{ title: 'Global Macro', 		  									open: false,   	url: 'pages/global-macro.html' },
 			{ title: 'Austrian Economics', 		  								open: false,  	url: 'pages/austrian-economics.html' },
 			{ title: 'Austrian Vs. Keynsian (Austrian Business Cycle Theory)', 	open: false,  	url: 'pages/austrian-vs-keynsian.html' },
-			{ title: 'Kelly Criterion vs. VaR', 								open: true,  	url: 'pages/kelly-criterion-vs-var.html' },
+			{ title: 'Kelly Criterion vs. VaR', 								open: false,  	url: 'pages/kelly-criterion-vs-var.html' },
 			{ title: 'Global Macro Allocation vs Traditional & Modern',  		open: false,  	url: 'pages/global-macro-allocation.html' },
+			{ title: 'Passive Management vs. Active Management',  				open: false,  	url: 'pages/passive-vs-active-management.html' },
+			{ title: 'Global Macro Performance Model',  						open: false,  	url: 'pages/global-macro-performance-model.html' },
+			{ title: 'Italy back in crisis focus',  							open: false,  	url: 'pages/italy.html' },
+			{ title: 'NAFTA is Now USMCA',  									open: false,  	url: 'pages/nafta-usmca.html' },
+			{ title: 'Cocoa & Coffee – Markets We Love',  						open: false,  	url: 'pages/cocoa-coffee.html' },
+			{ title: 'Investment Methodology',  								open: false,  	url: 'pages/investment-methodology.html' },
+			{ title: 'Landscape is Rapidly Shifting',  							open: false,  	url: 'pages/landscape.html' },
+			//{ title: 'Management Team',  										open: false,  	url: 'pages/management-team.html' },
+			{ title: 'Investor Information',  									open: false,  	url: 'pages/investor-info.html' },
+			{ title: 'Legal Disclaimer',  										open: false,  	url: 'pages/legal-disclaimer.html' },
 		];
 
 		Rs.openAccordionPage = (P) => {
