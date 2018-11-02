@@ -2,6 +2,11 @@
 	width: 100%;
 	max-width: 1170px;
 	margin: 0 auto;
+  padding-top: 20px;
+}
+
+.fa, .fas {
+  transition: all 0.3s;
 }
 
 .Accordion_Content{
@@ -10,25 +15,101 @@
 
 /*
 animation:*/
-.slideDown.ng-hide {
-  max-height:0;
-  transition:all 0.3s ease;
-  overflow:hidden;
-  position:relative;
+
+
+
+.fadein-children > *, .fadein{
+  transition: all 1s;
+  transform: scale(0.9); opacity: 0;
 }
 
-.slideDown {
-  max-height:10000px;
-  transition:all 0.3s ease;
-  overflow:hidden;
-  position:relative;
+.fadein-children{
+
+  & > span, & > br, & > b, & > i{
+    display: block;
+  }
+
 }
 
-.slideDown.ng-hide-remove,
-.slideDown.ng-hide-add {
-  /* remember, the .hg-hide class is added to element
-  when the active class is added causing it to appear
-  as hidden. Therefore set the styling to display=block
-  so that the hide animation is visible */
-  display:block!important;
+.fadein-image{
+  transition: all 1s;
+  opacity: 0;
 }
+
+.enterright-children > *{
+  transition: all 1s;
+  transform: translateX(50px); opacity: 0;
+}
+
+.enterright-children.ready > *{
+  transform: translateX(0); opacity: 1;
+}
+
+
+.animate-children-step > *{
+   transition-timing-function: cubic-bezier(0.05, 0.48, 0.4, 1.09);
+}
+
+.animate-children-step > *:nth-child(1){  transition-delay: 0ms; }
+.animate-children-step > *:nth-child(2){  transition-delay: 100ms; }
+.animate-children-step > *:nth-child(3){  transition-delay: 200ms; }
+.animate-children-step > *:nth-child(4){  transition-delay: 300ms; }
+.animate-children-step > *:nth-child(5){  transition-delay: 400ms; }
+.animate-children-step > *:nth-child(6){  transition-delay: 500ms; }
+.animate-children-step > *:nth-child(7){  transition-delay: 600ms; }
+.animate-children-step > *:nth-child(8){  transition-delay: 700ms; }
+.animate-children-step > *:nth-child(9){  transition-delay: 800ms; }
+.animate-children-step > *:nth-child(10){ transition-delay: 900ms; }
+.animate-children-step > *:nth-child(11){ transition-delay: 1000ms; }
+.animate-children-step > *:nth-child(12){ transition-delay: 1100ms; }
+.animate-children-step > *:nth-child(13){ transition-delay: 1200ms; }
+.animate-children-step > *:nth-child(14){ transition-delay: 1300ms; }
+.animate-children-step > *:nth-child(15){ transition-delay: 1400ms; }
+.animate-children-step > *:nth-child(16){ transition-delay: 1500ms; }
+.animate-children-step > *:nth-child(17){ transition-delay: 1600ms; }
+.animate-children-step > *:nth-child(18){ transition-delay: 1700ms; }
+.animate-children-step > *:nth-child(19){ transition-delay: 1800ms; }
+.animate-children-step > *:nth-child(20){ transition-delay: 1900ms; }
+.animate-children-step > *:nth-child(21){ transition-delay: 2000ms; }
+.animate-children-step > *:nth-child(22){ transition-delay: 2100ms; }
+.animate-children-step > *:nth-child(23){ transition-delay: 2200ms; }
+.animate-children-step > *:nth-child(24){ transition-delay: 2300ms; }
+.animate-children-step > *:nth-child(25){ transition-delay: 2400ms; }
+.animate-children-step > *:nth-child(26){ transition-delay: 2500ms; }
+.animate-children-step > *:nth-child(27){ transition-delay: 2600ms; }
+.animate-children-step > *:nth-child(28){ transition-delay: 2700ms; }
+.animate-children-step > *:nth-child(29){ transition-delay: 2800ms; }
+.animate-children-step > *:nth-child(30){ transition-delay: 2900ms; }
+
+.closedSection{
+
+}
+
+.openSection{
+
+  .fadein-children > *, .fadein{
+    transform: scale(1); opacity: 1;
+  }
+
+  .fadein-image{
+    opacity: 1;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

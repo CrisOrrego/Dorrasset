@@ -1,21 +1,31 @@
-<div id="pieCharts" layout=column layout-gt-xs=row>
-	<md-card layout=column flex-gt-xs class="no-margin opacable">
-		<h3 class="md-headline text-center">Traditional</h3>
-		<nvd3 options="pieOptions" data="pie1" ></nvd3>
-		<p>Traditional portfolios are “long” meaning they can only increase in value if the equities and bonds selected within them go up in price</p>
-	</md-card>
+<div id="pieCharts" layout=column layout-gt-xs=row class="animate-children-step fadein-children">
+	<div layout=column flex-gt-xs>
+		<md-card  class="no-margin opacable">
+			<h3 class="md-headline text-center">Traditional</h3>
+			<nvd3 options="pieOptions" data="pie1" ></nvd3>
+			<p>Traditional portfolios are “long” meaning they can only increase in value if the equities and bonds selected within them go up in price</p>
+		</md-card>
+	</div>
 
-	<md-card layout=column flex-gt-xs class="no-margin opacable">
-		<h3 class="md-headline text-center">Modern</h3>
-		<nvd3 options="pieOptions" data="pie2" ></nvd3>
-		<p>Modern portfolios are no different. They modestly add diversification with international equities and bonds.</p>
-	</md-card>
+	<div layout=column flex-gt-xs>
+		<md-card  class="no-margin opacable">
+			<h3 class="md-headline text-center">Modern</h3>
+			<nvd3 options="pieOptions" data="pie2" ></nvd3>
+			<p>Modern portfolios are no different. They modestly add diversification with international equities and bonds.</p>
+		</md-card>
+	</div>
 
-	<md-card layout=column flex-gt-xs class="no-margin">
-		<h3 class="md-headline text-center">Global Macro</h3>
-		<nvd3 options="pieOptions" data="pie3" ></nvd3>
-		<p>A <b>Global Macro</b> portfolio is diversified across far more asset classes and has the benefit of “short” investment positions that can profit when markets go down in price. </p>
-	</md-card>
+	<div layout=column flex-gt-xs>
+		<md-card class="no-margin">
+			<h3 class="md-headline text-center">Global Macro</h3>
+			<nvd3 options="pieOptions" data="pie3" ></nvd3>
+			<p>A <b>Global Macro</b> portfolio is diversified across far more asset classes and has the benefit of “short” investment positions that can profit when markets go down in price. </p>
+		</md-card>
+	</div>
+
+
+
+
 </div>
 
 
@@ -31,12 +41,12 @@
 		transform: scale(0.95);
 	}
 
-	#pieCharts > .opacable{
+	#pieCharts > div > .opacable{
 		opacity: 0.5;
 		transition: all 0.3s;
 	}
 
-	#pieCharts > .opacable:hover{
+	#pieCharts > div > .opacable:hover{
 		opacity: 1 ;
 		/*transform: scale(1);*/
 	}
