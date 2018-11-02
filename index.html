@@ -17,7 +17,7 @@
 				<md-button class="md-icon-button">
 					<md-icon md-font-icon="fa-chevron-right fa-lg" ng-class="{ 'fa-rotate-90': P.open }"></md-icon>
 				</md-button>
-				<h2 flex class="md-display no-margin lh40 h40">{{ P.title }}</h2>
+				<h2 flex class="md-display no-margin lh40 h40 " md-truncate>{{ P.title }}</h2>
 			</div>
 			
 			<div class="" ng-if="P.loaded" ng-show="P.open" >
