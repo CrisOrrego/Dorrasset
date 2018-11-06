@@ -69,17 +69,21 @@ angular.module('MainCtrl', [])
                 labelThreshold: 0.02,
                 showLegend: false,
                 donutRatio: 0.5,
-                labelsOutside: false,
+                labelsOutside: true,
                 donut: true,
                 labelSunbeamLayout: false,
                 labelType: 'percent',
                 color: ['#88A80B','#BCDA45','#A7CB1B','#6F8B00','#526700','#579E0A','#8ACD41','#70BF19','#448300','#326100','#AFAA0B','#E3DE48','#D4CE1C','#918C00','#6B6800'],
             	margin : {
-                    top: -20,
+                    top: 0,
                     right: 0,
-                    bottom: 0,
+                    bottom: 10,
                     left: 0
                 },
+                labelType: function(a,b,c){
+                	var percent = d3.format('.0%')((a.endAngle - a.startAngle) / (2 * Math.PI));
+                	return c.key + ' (' + percent + ')';
+                }
             }
         };
 
@@ -105,8 +109,8 @@ angular.module('MainCtrl', [])
 			{ key: "Short Commodities", 		y: 10 },
 			{ key: "Long FX", 					y: 10 },
 			{ key: "Short FX", 					y: 10 },
-			{ key: "Long Int FX", 				y: 10 },
-			{ key: "Short Int FX", 				y: 10 },
+			{ key: "Long Futures", 				y: 10 },
+			{ key: "Short Futures", 			y: 10 },
         ];
 
 
@@ -134,11 +138,29 @@ angular.module('MainCtrl', [])
         };
 
 
+		Rs.toogleAll = (val) => {
+			Rs.AccordionPages.forEach((P) => {
+				P.loaded = true;
+				P.open = val;
+
+				if(P.open){
+					$timeout(() => {
+						P.animate = true;
+						window.dispatchEvent(new Event('resize'));
+					}, 300);
+				}else{
+					P.animate = false;
+				};
+				
+			});
+		};
+
+
         Rs.mainClass = '';
         $timeout(() => {
-        	//window.dispatchEvent(new Event('resize'));
+        	window.dispatchEvent(new Event('resize'));
         	Rs.mainClass = 'Ready';
-        }, 300);
+        }, 500);
 
 
 	}

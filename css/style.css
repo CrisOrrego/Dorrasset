@@ -20,6 +20,29 @@
 .fas {
   transition: all 0.3s;
 }
+.Accordion_Title {
+  transition: all 0.3s;
+}
+.Accordion_Title md-icon,
+.Accordion_Title h2 {
+  color: black;
+  transition: all 0.3s;
+}
+.Accordion_Title:hover md-icon,
+.Accordion_Title:hover h2 {
+  color: #919a52;
+}
+@media (max-width: 599px) {
+  .Accordion_Title h2 {
+    font-size: 1.1em;
+  }
+  .Accordion_Content {
+    padding: 0px 10px 10px 10px !important;
+  }
+  .dorrbox {
+    font-size: 10px !important;
+  }
+}
 .Accordion_Content {
   padding: 2px 20px 20px 55px;
 }

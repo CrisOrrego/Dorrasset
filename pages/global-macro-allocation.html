@@ -1,22 +1,23 @@
-<div id="pieCharts" layout=column layout-gt-xs=row class="animate-children-step fadein-children">
-	<div layout=column flex-gt-xs>
-		<md-card  class="no-margin opacable">
+<div id="pieCharts" layout layout-wrap class="animate-children-step fadein-children">
+	
+	<div layout=column flex=100 flex-gt-xs=50>
+		<md-card  class="margin">
 			<h3 class="md-headline text-center">Traditional</h3>
 			<nvd3 options="pieOptions" data="pie1" ></nvd3>
 			<p>Traditional portfolios are “long” meaning they can only increase in value if the equities and bonds selected within them go up in price</p>
 		</md-card>
 	</div>
 
-	<div layout=column flex-gt-xs>
-		<md-card  class="no-margin opacable">
+	<div layout=column flex=100 flex-gt-xs=50>
+		<md-card  class="margin">
 			<h3 class="md-headline text-center">Modern</h3>
 			<nvd3 options="pieOptions" data="pie2" ></nvd3>
 			<p>Modern portfolios are no different. They modestly add diversification with international equities and bonds.</p>
 		</md-card>
 	</div>
 
-	<div layout=column flex-gt-xs>
-		<md-card class="no-margin">
+	<div layout=column flex=100>
+		<md-card class="margin">
 			<h3 class="md-headline text-center">Global Macro</h3>
 			<nvd3 options="pieOptions" data="pie3" ></nvd3>
 			<p>A <b>Global Macro</b> portfolio is diversified across far more asset classes and has the benefit of “short” investment positions that can profit when markets go down in price. </p>
@@ -32,7 +33,7 @@
 <style type="text/css">
 	
 	#pieCharts p{
-		margin-top: -50px;
+		margin-top: 0px;
 		padding: 0 10px;
 		text-align: center;
 	}
@@ -60,7 +61,7 @@
 	}
 
 	#pieCharts h3.md-headline.text-center {
-	    transform: translateY(224px);
+	    transform: translateY(235px);
 	    margin-top: -30px;
 	}
 
