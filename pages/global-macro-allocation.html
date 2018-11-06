@@ -1,27 +1,38 @@
-<div id="pieCharts" layout layout-wrap class="animate-children-step fadein-children">
+<div id="pieCharts" layout=column class="animate-children-step fadein-children">
 	
-	<div layout=column flex=100 flex-gt-xs=50>
-		<md-card  class="margin">
-			<h3 class="md-headline text-center">Traditional</h3>
-			<nvd3 options="pieOptions" data="pie1" ></nvd3>
-			<p>Traditional portfolios are “long” meaning they can only increase in value if the equities and bonds selected within them go up in price</p>
-		</md-card>
+	<div layout=column layout-gt-xs=row class="animate-children-step fadein-children">
+		<div layout=column flex-gt-xs>
+			<div class="chartCard">
+				<h3 class="md-headline text-center">Traditional</h3>
+				<nvd3 options="pieOptions" data="pie1" ></nvd3>
+				<div class="legend" layout layout-wrap layout-align="center center">
+					<div class="legend_item" ng-repeat="(k,d) in pie1" ng-style="{ 'background-color': pieOptions.chart.color[k] }">{{ d.key }} <b>{{ d.y }}%</b></div>
+				</div>
+				<p>Traditional portfolios are “long” meaning they can only increase in value if the equities and bonds selected within them go up in price</p>
+			</div>
+		</div>
+
+		<div layout=column flex-gt-xs>
+			<div class="chartCard">
+				<h3 class="md-headline text-center">Modern</h3>
+				<nvd3 options="pieOptions" data="pie2" ></nvd3>
+				<div class="legend" layout layout-wrap layout-align="center center">
+					<div class="legend_item" ng-repeat="(k,d) in pie2" ng-style="{ 'background-color': pieOptions.chart.color[k] }">{{ d.key }} <b>{{ d.y }}%</b></div>
+				</div>
+				<p>Modern portfolios are no different. They modestly add diversification with international equities and bonds.</p>
+			</div>
+		</div>
 	</div>
 
-	<div layout=column flex=100 flex-gt-xs=50>
-		<md-card  class="margin">
-			<h3 class="md-headline text-center">Modern</h3>
-			<nvd3 options="pieOptions" data="pie2" ></nvd3>
-			<p>Modern portfolios are no different. They modestly add diversification with international equities and bonds.</p>
-		</md-card>
-	</div>
-
-	<div layout=column flex=100>
-		<md-card class="margin">
+	<div layout=column>
+		<div class="chartCard">
 			<h3 class="md-headline text-center">Global Macro</h3>
 			<nvd3 options="pieOptions" data="pie3" ></nvd3>
+			<div class="legend" layout layout-wrap layout-align="center center">
+				<div class="legend_item" ng-repeat="(k,d) in pie3" ng-style="{ 'background-color': pieOptions.chart.color[k] }">{{ d.key }} <b>{{ d.y }}%</b></div>
+			</div>
 			<p>A <b>Global Macro</b> portfolio is diversified across far more asset classes and has the benefit of “short” investment positions that can profit when markets go down in price. </p>
-		</md-card>
+		</div>
 	</div>
 
 
@@ -33,9 +44,12 @@
 <style type="text/css">
 	
 	#pieCharts p{
-		margin-top: 0px;
-		padding: 0 10px;
+		margin-top: 10px;
+		padding: 0 30px;
 		text-align: center;
+		font-size: 1.15em;
+    	line-height: 1.35em;
+    	min-height: 70px;
 	}
 
 	#pieCharts .opacable{
@@ -56,13 +70,29 @@
 		transition: all 0.35s;
 	}
 
+	#pieCharts .nvd3 text{
+		font: 400 15px 'Lato';
+	}
+
 	#pieCharts md-card:hover nvd3{
-		transform: scale(1.1);
+		/*transform: scale(1.1);*/
 	}
 
 	#pieCharts h3.md-headline.text-center {
-	    transform: translateY(235px);
-	    margin-top: -30px;
+	    transform: translateY(172px);
+	    margin: 0 0 -30px;
+	}
+
+	#pieCharts .legend {
+	    min-height: 70px;
+	    padding: 0 30px;
+	   	margin-top: -10px;
+	}
+
+	#pieCharts .legend_item {
+	    border-radius: 50px;
+	    padding: 5px 10px;
+	    margin: 0 2px 5px;
 	}
 
 </style>

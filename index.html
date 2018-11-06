@@ -8,37 +8,38 @@
 	<link rel="stylesheet" href="css/style.css?201811051831">
 	<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 </head>
-<body ng-app="Dorrasset" ng-cloak layout=column ng-controller="MainCtrl" class="overflow-y">
+<body ng-app="Dorrasset" ng-cloak layout=column ng-controller="MainCtrl">
+	<div flex layout=column class="overflow-y">
+		<div id="Page_Wrapper" layout=column class="animate-children-step enterright-children" ng-class="mainClass">
 
-	<div id="Page_Wrapper" layout=column class="animate-children-step enterright-children" ng-class="mainClass">
-
-		<div layout class="">
-			<span class="w30"></span>
-			<md-button class="no-margin" ng-click="toogleAll(true)">
-				<md-icon md-font-icon="fa-plus fa-lg margin-right"></md-icon>Expand All
-			</md-button>
-			<span class="w20"></span>
-			<md-button class="no-margin" ng-click="toogleAll(false)">
-				<md-icon md-font-icon="fa-minus fa-lg margin-right"></md-icon>Collapse All
-			</md-button>
-		</div>
-
-		<div ng-repeat="P in AccordionPages" class="AccordionPage">
-			<div layout class="md-pointer Accordion_Title" ng-click="openAccordionPage(P)">
-				<md-button class="md-icon-button no-margin">
-					<md-icon md-font-icon="fa-chevron-right fa-lg" ng-class="{ 'fa-rotate-90': P.open }"></md-icon>
+			<div layout class="">
+				<span class="w30"></span>
+				<md-button class="no-margin" ng-click="toogleAll(true)">
+					<md-icon md-font-icon="fa-plus fa-lg margin-right"></md-icon>Expand All
 				</md-button>
-				<h2 flex class="md-display no-margin lh40 h40 " md-truncate>{{ P.title }}</h2>
+				<span class="w20"></span>
+				<md-button class="no-margin" ng-click="toogleAll(false)">
+					<md-icon md-font-icon="fa-minus fa-lg margin-right"></md-icon>Collapse All
+				</md-button>
 			</div>
-			
-			<div class="" ng-if="P.loaded" ng-show="P.open" >
-				<div  ng-include="P.url" class="Accordion_Content" ng-class="{ openSection: P.animate, closedSection: !P.animate }"></div>
+
+			<div ng-repeat="P in AccordionPages" class="AccordionPage">
+				<div layout class="md-pointer Accordion_Title" ng-click="openAccordionPage(P)">
+					<md-button class="md-icon-button no-margin">
+						<md-icon md-font-icon="fa-chevron-right fa-lg" ng-class="{ 'fa-rotate-90': P.open }"></md-icon>
+					</md-button>
+					<h2 flex class="md-display no-margin lh40 h40 " md-truncate>{{ P.title }}</h2>
+				</div>
+				
+				<div class="" ng-if="P.loaded" ng-show="P.open" >
+					<div  ng-include="P.url" class="Accordion_Content" ng-class="{ openSection: P.animate, closedSection: !P.animate }"></div>
+				</div>
 			</div>
+
+
+			<div class="h100"></div>
+
 		</div>
-
-
-		<div class="h100"></div>
-
 	</div>
 
 </body>
