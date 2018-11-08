@@ -281,14 +281,6 @@ angular.module('MainCtrl', [])
         		fullscreen: true,
         		clickOutsideToClose : true
         	});
-
-        	/*$mdDialog.show(
-				$mdDialog.alert()
-					.clickOutsideToClose(true).fullscreen(false)
-					.title(Title)
-					.textContent(Content)
-					.ok('OK')
-			);*/
         };
 
 
