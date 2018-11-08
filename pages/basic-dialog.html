@@ -1,0 +1,12 @@
+<md-dialog class="padding" flex=50>
+	
+	<div layout class="padding-left">
+		<h2 class="md-display no-margin lh40 h40" md-truncate flex>{{ Title }}</h2>
+		<md-button class="md-icon-button no-margin" aria-label="b" ng-click="Cancel()">
+			<md-icon md-svg-icon="md-close"></md-icon>
+			<md-tooltip md-direction="left">Close</md-tooltip>
+		</md-button>
+	</div>
+	
+	<div class="text-lg text-justify padding">{{ Content }}</div>
+</md-dialog>

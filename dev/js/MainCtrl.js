@@ -114,22 +114,23 @@ angular.module('MainCtrl', [])
                 duration: 1000,
                 labelThreshold: 0.02,
                 showLegend: false,
+                legendPosition: 'right',
                 donutRatio: 0.5,
-                labelsOutside: true,
+                labelsOutside: false,
                 donut: true,
                 labelSunbeamLayout: false,
                 labelType: 'percent',
                 color: ['#88A80B','#BCDA45','#A7CB1B','#6F8B00','#526700','#579E0A','#8ACD41','#70BF19','#448300','#326100','#AFAA0B','#E3DE48','#D4CE1C','#918C00','#6B6800'],
             	margin : {
-                    top: 0,
+                    top: -20,
                     right: 0,
-                    bottom: 10,
-                    left: 0
+                    bottom: 0,
+                    left: 5
                 },
-                labelType: function(a,b,c){
+                /*labelType: function(a,b,c){
                 	var percent = d3.format('.0%')((a.endAngle - a.startAngle) / (2 * Math.PI));
                 	return c.key + ' (' + percent + ')';
-                }
+                }*/
             }
         };
 
@@ -173,14 +174,24 @@ angular.module('MainCtrl', [])
         	{ Title: 'Harvest Profit/Loss', 								Content: 'If a trade theme has come to fruition and we feel that it has expressed itself in line with our views we will start taking profits. This is both a qualitative decision and quantitative. For example if we feel that 75% of the market has recognized our theme we will close at least half of a position. When we feel the whole market is onboard we will exit the remaining half of the trade. This may also be accomplished simply by hitting predetermined price targets and utilizing trailing stops.' },
         ];
 
-        Rs.showInfo = (Title, Content) => {
-        	$mdDialog.show(
+        Rs.showInfo = (ev, Title, Content) => {
+
+        	$mdDialog.show({
+        		controller: 'basicDialogCtrl',
+        		templateUrl: 'pages/basic-dialog.html',
+        		targetEvent: ev,
+        		locals:{ Title: Title, Content: Content },
+        		fullscreen: true,
+        		clickOutsideToClose : true
+        	});
+
+        	/*$mdDialog.show(
 				$mdDialog.alert()
 					.clickOutsideToClose(true).fullscreen(false)
 					.title(Title)
 					.textContent(Content)
 					.ok('OK')
-			);
+			);*/
         };
 
 

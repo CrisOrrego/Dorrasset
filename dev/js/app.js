@@ -14,8 +14,10 @@ app = angular.module('Dorrasset',
 
 	'appConfig',
 
-	'MainCtrl'
+	'MainCtrl',
+	'basicDialogCtrl',
 ]);
 
 //@koala-append "appConfig.js";
 //@koala-append "MainCtrl.js";
+//@koala-append "basicDialogCtrl.js";
