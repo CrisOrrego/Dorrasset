@@ -174,6 +174,23 @@ animation:*/
 .openSection .fadein-image {
   opacity: 1;
 }
+.darkChart {
+  background-color: #272727;
+  color: white;
+  fill: white;
+}
+.darkChart .tick {
+  fill: white;
+}
+.darkChart .nv-axis.nv-y .tick line {
+  display: none;
+}
+.darkChart .nv-axis.nv-x .tick line {
+  display: none;
+}
+.darkChart path {
+  stroke: #4e4e4e !important;
+}
 html {
   font-family: 'Lato', sans-serif !important;
   overflow: hidden !important;
