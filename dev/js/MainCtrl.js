@@ -60,7 +60,7 @@ angular.module('MainCtrl', [])
 		Rs.blackAreaOps = {
 			title: {
             	enable: true,
-            	text: 'S&P 500 Historical Drawdowns: 1927-2016',
+            	text: 'S&P 500 Historical Drawdowns: 1927-2018',
             	className: 'text-20px padding'
             },
             chart: {
@@ -80,10 +80,11 @@ angular.module('MainCtrl', [])
                 useInteractiveGuideline: false,
                 showLegend: false,
                 showControls: false,
+                color: ['#88A80B'],
                 xAxis: {
                     showMaxMin: false,
                     tickFormat: function(d) {
-                        return d3.time.format('%Y')(new Date(d))
+                        return d3.time.format('%x')(new Date(d))
                     }
                 },
                 yAxis: {
@@ -169,9 +170,9 @@ angular.module('MainCtrl', [])
         	{ Title: 'Emerging Market Central Banks', 						Content: 'Not to be ignored, the central banks of emerging economies such as Brazil, Russia, China, and India are playing an ever more important role in policy. Predictably however they tend to follow the lead of their more experienced developed market counterparts.' },
         	{ Title: 'Analysis of money, credit and securities supply', 	Content: 'This stage is vital to what we do. We create a proprietary view of bank money supply. Let’s take the Federal Reserve for example. The Fed publishes M1 and M2 but no longer publishes M3. We work to reconstruct M3 and add back in other shadow banking liabilities and offshore sweep transactions to get a better idea of credit expansion and its impact on global assets. We do the same in other economies like China where shadow banking makes up an even larger part of their GDP than in the U.S.. Last but not least we analyze the impact of collateral re-hypothecation in different financial centers, like London and Singapore. Risk is deeply embedded in the daisy-chain like pledging of securities as collateral among global financial institutions. Lehman Brothers proved this.' },
         	{ Title: 'Asset Class Impact Analysis', 						Content: 'Now that we have a framework for the policy decisions coming down from central banks and an unadulterated view of their resulting expansionary or contractionary stock and flow, we then determine which asset classes will continue in price direction and which asset classes will reverse price direction. ' },
-        	{ Title: 'Trade Expression Risk/Reward', 						Content: 'Once we have identified the asset classes that we expect to make the most significant moves we further refine our analysis towards sourcing the best risk/reward trade expression. This  may be done through options, outright positions, indirect assets with high correlations but better risk/reward payoffs, spread trades, carry trades, reverse carry trades, and other expression tools.' },
+        	{ Title: 'Trade Expression Risk / Reward', 						Content: 'Once we have identified the asset classes that we expect to make the most significant moves we further refine our analysis towards sourcing the best risk/reward trade expression. This  may be done through options, outright positions, indirect assets with high correlations but better risk/reward payoffs, spread trades, carry trades, reverse carry trades, and other expression tools.' },
         	{ Title: 'Risk manage and optimize live position', 				Content: 'Many of our trade themes can take 6 months or longer to reach their event horizon. Because of this time frame there are often opportunities to fine tune a trade during that period with better risk/reward characteristics or conversely events may change that necessitate reducing the position, increasing the position, or closing a position.' },
-        	{ Title: 'Harvest Profit/Loss', 								Content: 'If a trade theme has come to fruition and we feel that it has expressed itself in line with our views we will start taking profits. This is both a qualitative decision and quantitative. For example if we feel that 75% of the market has recognized our theme we will close at least half of a position. When we feel the whole market is onboard we will exit the remaining half of the trade. This may also be accomplished simply by hitting predetermined price targets and utilizing trailing stops.' },
+        	{ Title: 'Harvest Profit / Loss', 								Content: 'If a trade theme has come to fruition and we feel that it has expressed itself in line with our views we will start taking profits. This is both a qualitative decision and quantitative. For example if we feel that 75% of the market has recognized our theme we will close at least half of a position. When we feel the whole market is onboard we will exit the remaining half of the trade. This may also be accomplished simply by hitting predetermined price targets and utilizing trailing stops.' },
         ];
 
         Rs.showInfo = (ev, Title, Content) => {
