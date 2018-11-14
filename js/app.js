@@ -177,7 +177,7 @@ angular.module('MainCtrl', [])
                 useInteractiveGuideline: false,
                 showLegend: false,
                 showControls: false,
-                color: ['#88A80B'],
+                color: ['#ceff0e'],
                 xAxis: {
                     showMaxMin: false,
                     tickFormat: function(d) {

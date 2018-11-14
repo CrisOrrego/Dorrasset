@@ -4,7 +4,7 @@
 		<div layout=column flex-gt-xs>
 			<div class="chartCard">
 				<h3 class="md-headline text-center">Traditional</h3>
-				<nvd3 options="pieOptions" data="pie1" ></nvd3>
+				<nvd3 class="chart-pie-nostroke" options="pieOptions" data="pie1" ></nvd3>
 				<div class="legend" layout layout-wrap layout-align="center center">
 					<div class="legend_item" ng-repeat="(k,d) in pie1" ng-style="{ 'background-color': pieOptions.chart.color[k] }">{{ d.key }} <b>{{ d.y }}%</b></div>
 				</div>
@@ -15,7 +15,7 @@
 		<div layout=column flex-gt-xs>
 			<div class="chartCard">
 				<h3 class="md-headline text-center">Modern</h3>
-				<nvd3 options="pieOptions" data="pie2" ></nvd3>
+				<nvd3 class="chart-pie-nostroke" options="pieOptions" data="pie2" ></nvd3>
 				<div class="legend" layout layout-wrap layout-align="center center">
 					<div class="legend_item" ng-repeat="(k,d) in pie2" ng-style="{ 'background-color': pieOptions.chart.color[k] }">{{ d.key }} <b>{{ d.y }}%</b></div>
 				</div>
@@ -27,7 +27,7 @@
 	<div layout=column>
 		<div class="chartCard">
 			<h3 class="md-headline text-center">Global Macro</h3>
-			<nvd3 options="pieOptions" data="pie3" ></nvd3>
+			<nvd3 class="chart-pie-nostroke" options="pieOptions" data="pie3" ></nvd3>
 			<div class="legend" layout layout-wrap layout-align="center center">
 				<div class="legend_item" ng-repeat="(k,d) in pie3" ng-style="{ 'background-color': pieOptions.chart.color[k] }">{{ d.key }} <b>{{ d.y }}%</b></div>
 			</div>
@@ -93,6 +93,7 @@
 	    border-radius: 50px;
 	    padding: 5px 10px;
 	    margin: 0 2px 5px;
+	    color: black;
 	}
 
 </style>
