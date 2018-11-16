@@ -175,7 +175,7 @@ angular.module('MainCtrl', [])
         	{ Title: 'Harvest Profit / Loss', 								Content: 'If a trade theme has come to fruition and we feel that it has expressed itself in line with our views we will start taking profits. This is both a qualitative decision and quantitative. For example if we feel that 75% of the market has recognized our theme we will close at least half of a position. When we feel the whole market is onboard we will exit the remaining half of the trade. This may also be accomplished simply by hitting predetermined price targets and utilizing trailing stops.' },
         ];
 
-        Rs.showInfo = (ev, Title, Content) => {
+        Rs.showInfo = (ev, Title, Content, parent) => {
 
         	$mdDialog.show({
         		controller: 'basicDialogCtrl',
@@ -183,7 +183,8 @@ angular.module('MainCtrl', [])
         		targetEvent: ev,
         		locals:{ Title: Title, Content: Content },
         		fullscreen: true,
-        		clickOutsideToClose : true
+        		clickOutsideToClose : true,
+                parent: angular.element(parent)
         	});
         };
 
