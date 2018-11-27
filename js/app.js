@@ -124,7 +124,7 @@ angular.module('MainCtrl', [])
 			{ title: 'Italy back in crisis focus',  							open: false, animate: false, url: 'pages/italy.html' },
 			{ title: 'NAFTA is Now USMCA',  									open: false, animate: false, url: 'pages/nafta-usmca.html' },
 			{ title: 'Cocoa & Coffee – Markets We Love',  						open: false, animate: false, url: 'pages/cocoa-coffee.html' },
-			{ title: 'Investment Methodology',  				  				open: false, animate: false, url: 'pages/investment-methodology.html' },
+			{ title: 'Investment Methodology',  				                open: false, animate: false, url: 'pages/investment-methodology.html' },
 			{ title: 'Landscape is Rapidly Shifting',  							open: false, animate: false, url: 'pages/landscape.html' },
 			{ title: 'Investor Information',  									open: false, animate: false, url: 'pages/investor-info.html' },
 			{ title: 'Legal Disclaimer',  										open: false, animate: false, url: 'pages/legal-disclaimer.html' },
@@ -279,7 +279,7 @@ angular.module('MainCtrl', [])
         		templateUrl: 'pages/basic-dialog.html',
         		targetEvent: ev,
         		locals:{ Title: Title, Content: Content },
-        		fullscreen: true,
+        		fullscreen: false,
         		clickOutsideToClose : true,
                 parent: angular.element(parent)
         	});

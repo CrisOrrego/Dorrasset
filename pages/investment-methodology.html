@@ -1,4 +1,4 @@
-<div layout=column id="investment_methodology" layout-align="center center">
+<div id="investment_methodology" layout=column  layout-align="center center">
 
 	<div class="text-justify text-lg mxw800">
 
@@ -8,40 +8,51 @@
 
 	<br>
 
-	<div layout=column class="relative w100p">
-		
-		<div layout class="text-center md-title text-bold h40 lh40 animate-children-step fadein-children">
-			<div style="width: 62.4%">Investment Research & Analysis</div><span></span><span></span><span></span><span></span>
-			<div class="border-left" flex>Trade Execution</div>
-		</div>
+	<div  layout=column class="relative w100p">
 
-		<div layout layout-align="space-around" class="animate-children-step fadein-children">
+		<div layout=column layout-gt-xs=row>
 			
-			<div flex layout=column layout-align="center stretch" class="">
-				<div ng-click="showInfo($event, InvM[0].Title, InvM[0].Content, '#investment_methodology')" md-ink-ripple class="dorrbox dorrbox-square text-bold" layout=column layout-align="center center">{{ InvM[0].Title }}</div>
-				<div ng-click="showInfo($event, InvM[1].Title, InvM[1].Content, '#investment_methodology')" md-ink-ripple class="dorrbox dorrbox-square text-bold" layout=column layout-align="center center">{{ InvM[1].Title }}</div>
+			<div layout=column flex-gt-xs=60>
+				<div class="text-center md-title text-bold h40 lh40">Investment Research & Analysis</div>
+				<div layout class="animate-children-step fadein-children">
+					<div flex=15 layout=column layout-align="center stretch" class="">
+						<div ng-click="showInfo($event, InvM[0].Title, InvM[0].Content, '#investment_methodology')" md-ink-ripple class="dorrbox dorrbox-square text-bold" layout=column layout-align="center center">{{ InvM[0].Title }}</div>
+						<div ng-click="showInfo($event, InvM[1].Title, InvM[1].Content, '#investment_methodology')" md-ink-ripple class="dorrbox dorrbox-square text-bold" layout=column layout-align="center center">{{ InvM[1].Title }}</div>
+					</div>
+					<div flex layout=column layout-align="center stretch" class="border-bottom">
+						<div ng-click="showInfo($event, InvM[2].Title, InvM[2].Content, '#investment_methodology')" md-ink-ripple class="dorrbox" layout=column layout-align="center center">{{ InvM[2].Title }}</div>
+					</div>
+					<div flex layout=column layout-align="center stretch" class="border-bottom">
+						<div ng-click="showInfo($event, InvM[3].Title, InvM[3].Content, '#investment_methodology')" md-ink-ripple class="dorrbox" layout=column layout-align="center center">{{ InvM[3].Title }}</div>
+					</div>
+					<div flex layout=column layout-align="center stretch" class="border-bottom">
+						<div ng-click="showInfo($event, InvM[4].Title, InvM[4].Content, '#investment_methodology')" md-ink-ripple class="dorrbox" layout=column layout-align="center center">{{ InvM[4].Title }}</div>
+					</div>
+					<div flex layout=column layout-align="center stretch" class="border-bottom">
+						<div ng-click="showInfo($event, InvM[5].Title, InvM[5].Content, '#investment_methodology')" md-ink-ripple class="dorrbox" layout=column layout-align="center center">{{ InvM[5].Title }}</div>
+					</div>
+				</div>
+
 			</div>
-			<div flex layout=column layout-align="center stretch" class="border-bottom">
-				<div ng-click="showInfo($event, InvM[2].Title, InvM[2].Content, '#investment_methodology')" md-ink-ripple class="dorrbox" layout=column layout-align="center center">{{ InvM[2].Title }}</div>
+
+			<div layout=column flex-gt-xs>
+				<div class="text-center md-title text-bold h40 lh40">Trade Execution</div>
+				<div flex-gt-xs layout class="animate-children-step fadein-children">
+					<div flex layout=column layout-align="center stretch" class="border-bottom border-left">
+						<div ng-click="showInfo($event, InvM[6].Title, InvM[6].Content, '#investment_methodology')" md-ink-ripple class="dorrbox clearbox" layout=column layout-align="center center">{{ InvM[6].Title }}</div>
+					</div>
+					<div flex layout=column layout-align="center stretch" class="border-bottom">
+						<div ng-click="showInfo($event, InvM[7].Title, InvM[7].Content, '#investment_methodology')" md-ink-ripple class="dorrbox clearbox" layout=column layout-align="center center">{{ InvM[7].Title }}</div>
+					</div>
+					<div flex layout=column layout-align="center stretch" class="border-bottom">
+						<div ng-click="showInfo($event, InvM[8].Title, InvM[8].Content, '#investment_methodology')" md-ink-ripple class="dorrbox clearbox" layout=column layout-align="center center">{{ InvM[8].Title }}</div>
+					</div>
+				</div>
+
 			</div>
-			<div flex layout=column layout-align="center stretch" class="border-bottom">
-				<div ng-click="showInfo($event, InvM[3].Title, InvM[3].Content, '#investment_methodology')" md-ink-ripple class="dorrbox" layout=column layout-align="center center">{{ InvM[3].Title }}</div>
-			</div>
-			<div flex layout=column layout-align="center stretch" class="border-bottom">
-				<div ng-click="showInfo($event, InvM[4].Title, InvM[4].Content, '#investment_methodology')" md-ink-ripple class="dorrbox" layout=column layout-align="center center">{{ InvM[4].Title }}</div>
-			</div>
-			<div flex layout=column layout-align="center stretch" class="border-bottom">
-				<div ng-click="showInfo($event, InvM[5].Title, InvM[5].Content, '#investment_methodology')" md-ink-ripple class="dorrbox" layout=column layout-align="center center">{{ InvM[5].Title }}</div>
-			</div>
-			<div flex layout=column layout-align="center stretch" class="border-bottom border-left">
-				<div ng-click="showInfo($event, InvM[6].Title, InvM[6].Content, '#investment_methodology')" md-ink-ripple class="dorrbox clearbox" layout=column layout-align="center center">{{ InvM[6].Title }}</div>
-			</div>
-			<div flex layout=column layout-align="center stretch" class="border-bottom">
-				<div ng-click="showInfo($event, InvM[7].Title, InvM[7].Content, '#investment_methodology')" md-ink-ripple class="dorrbox clearbox" layout=column layout-align="center center">{{ InvM[7].Title }}</div>
-			</div>
-			<div flex layout=column layout-align="center stretch" class="border-bottom">
-				<div ng-click="showInfo($event, InvM[8].Title, InvM[8].Content, '#investment_methodology')" md-ink-ripple class="dorrbox clearbox" layout=column layout-align="center center">{{ InvM[8].Title }}</div>
-			</div>
+
+			
+			
 
 		</div>
 
@@ -58,7 +69,7 @@
     text-align: center;
     background: rgb(165,175,100);
     font-size: 20px;
-    height: 170px;
+    height: 150px;
     border-radius: 10px;
     border: 1px solid #728400;
     transform: scale(0.9);
@@ -71,7 +82,7 @@
 }
 
 .dorrbox-square{
-	height: 130px;
+	height: 120px;
 }
 
 .dorrbox.clearbox{
