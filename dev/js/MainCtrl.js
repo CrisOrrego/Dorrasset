@@ -17,20 +17,20 @@ angular.module('MainCtrl', [])
 
 
 		Rs.AccordionPages = [
-			{ title: 'Global Macro', 		  									open: false, animate: false, url: 'pages/global-macro.html' },
-			{ title: 'Austrian Economics', 		  								open: false, animate: false, url: 'pages/austrian-economics.html' },
-			{ title: 'Austrian Vs. Keynsian (Austrian Business Cycle Theory)', 	open: false, animate: false, url: 'pages/austrian-vs-keynsian.html' },
-			{ title: 'Kelly Criterion vs. VaR', 								open: false, animate: false, url: 'pages/kelly-criterion-vs-var.html' },
-			{ title: 'Global Macro Allocation vs Traditional & Modern',  		open: false, animate: false, url: 'pages/global-macro-allocation.html' },
-			{ title: 'Passive Management vs. Active Management',  				open: false, animate: false, url: 'pages/passive-vs-active-management.html' },
-			{ title: 'Global Macro Performance Model',  						open: false, animate: false, url: 'pages/global-macro-performance-model.html' },
-			{ title: 'Italy back in crisis focus',  							open: false, animate: false, url: 'pages/italy.html' },
-			{ title: 'NAFTA is Now USMCA',  									open: false, animate: false, url: 'pages/nafta-usmca.html' },
-			{ title: 'Cocoa & Coffee – Markets We Love',  						open: false, animate: false, url: 'pages/cocoa-coffee.html' },
-			{ title: 'Investment Methodology',  				                open: false, animate: false, url: 'pages/investment-methodology.html' },
-			{ title: 'Landscape is Rapidly Shifting',  							open: false, animate: false, url: 'pages/landscape.html' },
-			{ title: 'Investor Information',  									open: false, animate: false, url: 'pages/investor-info.html' },
-			{ title: 'Legal Disclaimer',  										open: false, animate: false, url: 'pages/legal-disclaimer.html' },
+			{ title: 'Global Macro', 		  									loaded: false, open: false, animate: false, url: 'pages/global-macro.html' },
+			{ title: 'Austrian Economics', 		  								loaded: false, open: false, animate: false, url: 'pages/austrian-economics.html' },
+			{ title: 'Austrian Vs. Keynsian (Austrian Business Cycle Theory)', 	loaded: false, open: false, animate: false, url: 'pages/austrian-vs-keynsian.html' },
+			{ title: 'Kelly Criterion vs. VaR', 								loaded: false, open: false, animate: false, url: 'pages/kelly-criterion-vs-var.html' },
+			{ title: 'Global Macro Allocation vs Traditional & Modern',  		loaded: false, open: false, animate: false, url: 'pages/global-macro-allocation.html' },
+			{ title: 'Passive Management vs. Active Management',  				loaded: false, open: false, animate: false, url: 'pages/passive-vs-active-management.html' },
+			{ title: 'Global Macro Performance Model',  						loaded: false, open: false, animate: false, url: 'pages/global-macro-performance-model.html' },
+			{ title: 'Italy back in crisis focus',  							loaded: false, open: false, animate: false, url: 'pages/italy.html' },
+			{ title: 'NAFTA is Now USMCA',  									loaded: false, open: false, animate: false, url: 'pages/nafta-usmca.html' },
+			{ title: 'Cocoa & Coffee – Markets We Love',  						loaded: false, open: false, animate: false, url: 'pages/cocoa-coffee.html' },
+			{ title: 'Investment Methodology',  				                loaded: false, open: false, animate: false, url: 'pages/investment-methodology.html' },
+			{ title: 'Landscape is Rapidly Shifting',  							loaded: false, open: false, animate: false, url: 'pages/landscape.html' },
+			{ title: 'Investor Information',  									loaded: false, open: false, animate: false, url: 'pages/investor-info.html' },
+			{ title: 'Legal Disclaimer',  										loaded: false, open: false, animate: false, url: 'pages/legal-disclaimer.html' },
 		];
 
 		Rs.openAccordionPage = (P) => {

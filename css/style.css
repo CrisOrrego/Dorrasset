@@ -4065,7 +4065,7 @@ table {
   text-align: center !important;
 }
 .text-justify {
-  text-align: center !important;
+  text-align: justify !important;
 }
 .text-clear {
   opacity: 0.5;
